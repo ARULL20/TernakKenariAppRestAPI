@@ -10,3 +10,13 @@ class BuyerProfileResponseModel {
     required this.statusCode,
     required this.data,
   });
+
+  BuyerProfileResponseModel copyWith({
+    String? message,
+    int? statusCode,
+    Data? data,
+  }) => BuyerProfileResponseModel(
+    message: message ?? this.message,
+    statusCode: statusCode ?? this.statusCode,
+    data: data ?? this.data,
+  );
