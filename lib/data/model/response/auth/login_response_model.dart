@@ -42,3 +42,24 @@ class Data {
         this.role,
         this.token,
     });
+
+      factory Data.fromJson(String str) => Data.fromMap(json.decode(str));
+
+    String toJson() => json.encode(toMap());
+
+    factory Data.fromMap(Map<String, dynamic> json) => Data(
+        id: json["id"],
+        name: json["name"],
+        email: json["email"],
+        role: json["role"],
+        token: json["token"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "id": id,
+        "name": name,
+        "email": email,
+        "role": role,
+        "token": token,
+    };
+}
