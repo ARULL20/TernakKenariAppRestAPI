@@ -30,3 +30,13 @@ class AnakRequestModel {
     String? gambarBurung,
     int? ayahId,
     int? ibuId,
+      }) => AnakRequestModel(
+    noRing: noRing ?? this.noRing,
+    tanggalLahir: tanggalLahir ?? this.tanggalLahir,
+    jenisKelamin: jenisKelamin ?? this.jenisKelamin,
+    jenisKenari: jenisKenari ?? this.jenisKenari,
+    keterangan: keterangan ?? this.keterangan,
+    gambarBurung: gambarBurung ?? this.gambarBurung,
+    ayahId: ayahId ?? this.ayahId,
+    ibuId: ibuId ?? this.ibuId,
+  );
