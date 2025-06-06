@@ -57,3 +57,21 @@ class AnakRequestModel {
         ayahId: json["ayah_id"],
         ibuId: json["ibu_id"],
       );
+
+        Map<String, dynamic> toJson() {
+    final data = {
+      "no_ring": noRing,
+      "tanggal_lahir":
+          "${tanggalLahir.year.toString().padLeft(4, '0')}-${tanggalLahir.month.toString().padLeft(2, '0')}-${tanggalLahir.day.toString().padLeft(2, '0')}",
+      "jenis_kelamin": jenisKelamin,
+      "jenis_kenari": jenisKenari,
+      "keterangan": keterangan,
+      "ayah_id": ayahId,
+      "ibu_id": ibuId,
+    };
+    if (gambarBurung != null) {
+      data["gambar_burung"] = gambarBurung!;
+    }
+    return data;
+  }
+}
