@@ -20,3 +20,13 @@ class AnakRequestModel {
     required this.ayahId,
     required this.ibuId,
   });
+
+  AnakRequestModel copyWith({
+    String? noRing,
+    DateTime? tanggalLahir,
+    String? jenisKelamin,
+    String? jenisKenari,
+    String? keterangan,
+    String? gambarBurung,
+    int? ayahId,
+    int? ibuId,
