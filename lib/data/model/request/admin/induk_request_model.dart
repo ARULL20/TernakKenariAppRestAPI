@@ -16,3 +16,11 @@ class IndukRequestModel {
     required this.keterangan,
     this.gambarBurung, // nullable constructor param
   });
+
+  IndukRequestModel copyWith({
+    String? noRing,
+    DateTime? tanggalLahir,
+    String? jenisKelamin,
+    String? jenisKenari,
+    String? keterangan,
+    String? gambarBurung,
