@@ -37,3 +37,11 @@ class PostingJualRequestModel {
         harga: json["harga"],
         deskripsi: json["deskripsi"],
       );
+
+      Map<String, dynamic> toJson() => {
+    "burung_id": burungId,
+    "burung_type": burungType,
+    "harga": harga,
+    "deskripsi": deskripsi,
+  };
+}
