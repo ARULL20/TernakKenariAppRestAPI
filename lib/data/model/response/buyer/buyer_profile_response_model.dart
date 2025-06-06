@@ -39,3 +39,19 @@ class BuyerProfileResponseModel {
     "data": data.toJson(),
   };
 }
+
+class Data {
+  int id;
+  String name;
+  String address;
+  String phone;
+  String? photo;
+
+  Data({
+    required this.id,
+    required this.name,
+    required this.address,
+    required this.phone,
+    required this.photo,
+  });
+
