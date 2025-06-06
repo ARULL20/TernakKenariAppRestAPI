@@ -27,3 +27,18 @@ class LoginResponseModel {
         "data": data?.toMap(),
     };
 }
+
+class Data {
+    final int? id;
+    final String? name;
+    final String? email;
+    final String? role;
+    final String? token;
+
+    Data({
+        this.id,
+        this.name,
+        this.email,
+        this.role,
+        this.token,
+    });
