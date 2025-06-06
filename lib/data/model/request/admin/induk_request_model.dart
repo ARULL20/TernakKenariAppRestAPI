@@ -47,3 +47,14 @@ class IndukRequestModel {
         keterangan: json["keterangan"],
         gambarBurung: json["gambar_burung"], // nullable, can be null
       );
+
+        Map<String, dynamic> toJson() => {
+    "no_ring": noRing,
+    "tanggal_lahir":
+        "${tanggalLahir.year.toString().padLeft(4, '0')}-${tanggalLahir.month.toString().padLeft(2, '0')}-${tanggalLahir.day.toString().padLeft(2, '0')}",
+    "jenis_kelamin": jenisKelamin,
+    "jenis_kenari": jenisKenari,
+    "keterangan": keterangan,
+    if (gambarBurung != null) "gambar_burung": gambarBurung,
+  };
+}
