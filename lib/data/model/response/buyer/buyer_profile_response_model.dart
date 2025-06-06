@@ -55,3 +55,18 @@ class Data {
     required this.photo,
   });
 
+  Data copyWith({
+    int? id,
+    String? name,
+    String? address,
+    String? phone,
+    String? photo,
+  }) => Data(
+    id: id ?? this.id,
+    name: name ?? this.name,
+    address: address ?? this.address,
+    phone: phone ?? this.phone,
+    photo: photo ?? this.photo,
+  );
+
+
