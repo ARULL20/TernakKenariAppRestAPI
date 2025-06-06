@@ -1,9 +1,12 @@
 import 'dart:convert';
+import 'dart:developer';
 
-import 'package:canary_template/data/model/request/login_request.dart';
-import 'package:canary_template/data/model/response/login_response.dart';
-import 'package:canary_template/service/service_http_client.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+import 'package:canary_farm/data/model/request/auth/login_request_model.dart';
+import 'package:canary_farm/data/model/request/auth/register_request_model.dart';
+import 'package:canary_farm/data/model/response/auth/auth_response_model.dart';
+import 'package:canary_farm/service/service_http_client.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class AuthRepository {
