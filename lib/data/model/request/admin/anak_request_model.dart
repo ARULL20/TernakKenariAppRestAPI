@@ -40,3 +40,20 @@ class AnakRequestModel {
     ayahId: ayahId ?? this.ayahId,
     ibuId: ibuId ?? this.ibuId,
   );
+
+  factory AnakRequestModel.fromRawJson(String str) =>
+      AnakRequestModel.fromJson(json.decode(str));
+
+  String toRawJson() => json.encode(toJson());
+
+  factory AnakRequestModel.fromJson(Map<String, dynamic> json) =>
+      AnakRequestModel(
+        noRing: json["no_ring"],
+        tanggalLahir: DateTime.parse(json["tanggal_lahir"]),
+        jenisKelamin: json["jenis_kelamin"],
+        jenisKenari: json["jenis_kenari"],
+        keterangan: json["keterangan"],
+        gambarBurung: json["gambar_burung"], // nullable, can be null
+        ayahId: json["ayah_id"],
+        ibuId: json["ibu_id"],
+      );
