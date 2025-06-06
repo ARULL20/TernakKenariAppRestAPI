@@ -54,3 +54,12 @@ class User {
         role: json["role"],
         token: json["token"],
     );
+
+     Map<String, dynamic> toMap() => {
+        "id": id,
+        "name": name,
+        "email": email,
+        "role": role,
+        "token": token,
+    };
+}
