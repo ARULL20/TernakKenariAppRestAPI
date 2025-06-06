@@ -24,3 +24,11 @@ class IndukRequestModel {
     String? jenisKenari,
     String? keterangan,
     String? gambarBurung,
+      }) => IndukRequestModel(
+    noRing: noRing ?? this.noRing,
+    tanggalLahir: tanggalLahir ?? this.tanggalLahir,
+    jenisKelamin: jenisKelamin ?? this.jenisKelamin,
+    jenisKenari: jenisKenari ?? this.jenisKenari,
+    keterangan: keterangan ?? this.keterangan,
+    gambarBurung: gambarBurung ?? this.gambarBurung,
+  );
